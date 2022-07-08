@@ -67,7 +67,7 @@ $ alembic upgrade ae1
 $ alembic upgrade +2
 ```
 
-## Downgrade - Rollback no ambiente
+## Downgrade - Rollback no ambiente (desde o começo)
 
 ```sh
 $ alembic downgrade base
@@ -77,6 +77,18 @@ Usando o Makefile:
 
 ```sh
 $ make db-downgrade
+```
+
+## Downgrade - Rollback no ambiente (somente da última revisão)
+
+```sh
+$ alembic downgrade -1
+```
+
+Usando o Makefile:
+
+```sh
+$ make db-downgrade-last
 ```
 
 ## Mostrar os comandos SQLs (Offline Mode)

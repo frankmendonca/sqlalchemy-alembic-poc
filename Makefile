@@ -7,5 +7,8 @@ db-upgrade:
 db-downgrade:
 	alembic downgrade base
 
+db-downgrade-last:
+	alembic downgrade -1
+
 lint:
 	black -l 80 .
